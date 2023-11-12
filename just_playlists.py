@@ -34,6 +34,7 @@ class Playlist():
         
         self.index = {"numerical_index" : 0, "filename" : ""}
         self.is_playing = True
+        self.playlist = []
 
         
     def load_files(self, path_to_files : List[str]) -> None:
@@ -59,6 +60,7 @@ class Playlist():
             path_to_files: A list of files or a single file
             position: Where to add the file. Accepted values are: Start, End, Next
         """
+            
         try:
             postion = ALLOWEDPOSTIONS(postion.lower())
         except ValueError as e:
